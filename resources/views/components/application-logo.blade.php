@@ -1,0 +1,1 @@
+<img src="{{ asset('logo/kaeibo2.png ') }}" width="100px">
