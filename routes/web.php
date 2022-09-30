@@ -5,7 +5,9 @@ use \App\Http\Controllers\Demo\DemoController;
 use \App\Http\Controllers\AdminController;
 
 
-
+Route::get('/', function () {
+    return view('frontend.index');
+});
 
 Route::controller(DemoController::class)->group(function(){
     Route::get('/about','Index')->name('about.page');
@@ -18,6 +20,8 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('/admin/profile','profile')->name('admin.profile');
     Route::get('/edit/profile', 'EditProfile')->name('edit.profile');
     Route::post('/store/profile', 'StoreProfile')->name('store.profile');
+    Route::get('/admin/reigister', 'RegisterInfo')->name('admin.register');
+    Route::get('/admin/recover', 'RecoverInfo')->name('admin.recover');
 
     Route::get('/change/password', 'ChangePassword')->name('change.password');
     Route::post('/update/password', 'UpdatePassword')->name('update.password');
@@ -26,9 +30,6 @@ Route::controller(AdminController::class)->group(function(){
 });
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/dashboard', function () {
     return view('admin.index');

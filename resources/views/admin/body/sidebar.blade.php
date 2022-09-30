@@ -75,10 +75,10 @@
                     <span>Authentication</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="{{ route('admin.logout') }}">Login</a></li>
-                    <li><a href="{{ route('admin.logout') }}">Register</a></li>
-                    <li><a href="auth-recoverpw.html">Recover Password</a></li>
-                    <li><a href="auth-lock-screen.html">Lock Screen</a></li>
+                    <li><a href="{{ route('admin.logout') }}">Logout</a></li>
+                    <li><a href="{{ route('admin.register') }}">Register</a></li>
+                    <li><a href="{{ route('admin.recover') }}">Recover Password</a></li>
+                   <!-- <li><a href="auth-lock-screen.html">Lock Screen</a></li> -->
                 </ul>
             </li>
 

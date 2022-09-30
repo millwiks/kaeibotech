@@ -104,5 +104,17 @@ class AdminController extends Controller
 
     }// End Method
 
+    public function RegisterInfo(Request $request){
+
+        return view('auth.register');
+
+    }// End Method
+
+    public function RecoverInfo(Request $request){
+
+        return view('auth.forgot-password');
+
+    }// End Method
+
 
 }
