@@ -25,8 +25,6 @@ Route::controller(AdminController::class)->group(function(){
 
     Route::get('/change/password', 'ChangePassword')->name('change.password');
     Route::post('/update/password', 'UpdatePassword')->name('update.password');
-    
-  
 });
 
 
