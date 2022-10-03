@@ -24,6 +24,7 @@ Route::controller(AdminController::class)->group(function(){
     Route::post('/store/profile', 'StoreProfile')->name('store.profile');
     Route::get('/admin/reigister', 'RegisterInfo')->name('admin.register');
     Route::get('/admin/recover', 'RecoverInfo')->name('admin.recover');
+    Route::get('/dashboard', 'Dashboard')->name('dashboard');
 
     Route::get('/change/password', 'ChangePassword')->name('change.password');
     Route::post('/update/password', 'UpdatePassword')->name('update.password');

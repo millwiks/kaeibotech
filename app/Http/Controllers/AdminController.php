@@ -116,5 +116,11 @@ class AdminController extends Controller
 
     }// End Method
 
+    public function Dashboard(){
+
+        return view('admin.admin_master');
+    
+     }// End Method 
+
 
 }
