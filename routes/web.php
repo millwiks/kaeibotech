@@ -31,6 +31,7 @@ Route::controller(AdminController::class)->group(function(){
 // Home slide all route
 Route::controller(HomeSliderController::class)->group(function(){
     Route::get('/home/slide','HomeSlider')->name('home.slide');
+    Route::post('/update/slider', 'UpdateSlider')->name('update.slider');
 
     //my nav
     Route::get('/home/html','HomeHtml')->name('home.html');

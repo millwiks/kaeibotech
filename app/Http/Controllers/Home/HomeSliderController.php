@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\HomeSlide;
+use Image;
 
 class HomeSliderController extends Controller
 {
@@ -25,5 +26,23 @@ class HomeSliderController extends Controller
 
         return view('auth.login');
 
+    }// End Method
+
+    public function UpdateSlider(Request $request){
+
+        $slide_id = $request->id;
+
+        HomeSlide::findOrFail($slide_id)->update([
+            'description1' => $request->description1,
+            'description2' => $request->description2,
+            'description3' => $request->description3,
+            ]); 
+
+            $notification = array(
+                'message' => 'Home Tabs Updated  Successfully', 
+                'alert-type' => 'success'
+            );
+    
+            return redirect()->back()->with($notification);
     }// End Method
 }
