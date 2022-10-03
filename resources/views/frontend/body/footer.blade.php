@@ -3,7 +3,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                     <img class="logo1" src="{{ asset('frontend/assets/images/logo1.png')}}" alt="#"/>
+                  <a href="{{ route('home.html')}}" ><img class="logo1"  src="{{ asset('frontend/assets/images/logo1.png')}}" alt="#"/> </a>
                      <ul class="social_icon">
                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
