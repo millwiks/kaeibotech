@@ -40,7 +40,7 @@ Route::controller(HomeSliderController::class)->group(function(){
     Route::post('/update/slider', 'UpdateSlider')->name('update.slider');
 
     //my nav
-    Route::get('/home/html','HomeHtml')->name('home.html');
+    Route::get('/','HomeHtml')->name('home.html');
     Route::get('/login/html','LoginHtml')->name('login.html');
     
 });
