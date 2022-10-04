@@ -6,6 +6,7 @@ use \App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\PortfolioController;
+use App\Http\Controllers\Home\ContactController;
 
 
 Route::get('/', function () {
@@ -68,9 +69,19 @@ Route::controller(AboutController::class)->group(function(){
 
     Route::get('/delete/multi/image/{id}', 'DeleteMultiImage')->name('delete.multi.image');
     
+});
+
+ // Contact All Route 
+ Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact', 'Contact')->name('contact.me');
+    Route::post('/store/message', 'StoreMessage')->name('store.message');
+    Route::get('/contact/message', 'ContactMessage')->name('contact.message');   
+    Route::get('/delete/message/{id}', 'DeleteMessage')->name('delete.message');    
+
 
 
 });
+
 
 
 Route::get('/dashboard', function () {

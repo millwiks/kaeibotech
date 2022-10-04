@@ -25,21 +25,15 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="{{ route('home.about') }}">About</a>
                               </li>
+                           
                               <li class="nav-item">
-                                 <a class="nav-link" href="computer.html">Computer</a>
+                                 <a class="nav-link" href="Product.html">Products</a>
                               </li>
+                              
                               <li class="nav-item">
-                                 <a class="nav-link" href="laptop.html">Laptop</a>
+                                 <a class="nav-link" href="{{ route('contact.me')}}">Contact Us</a>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="product.html">Products</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="contact.html">Contact Us</a>
-                              </li>
-                              <li class="nav-item d_none">
-                                 <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                              </li>
+                              
                               <li class="nav-item d_none">
                                  <a class="nav-link" href="{{ route('login.html')}}">Login</a>
                               </li>

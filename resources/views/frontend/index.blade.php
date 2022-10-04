@@ -207,19 +207,27 @@
             </div>
             <div class="row">
                <div class="col-md-10 offset-md-1">
-                  <form id="request" class="main_form">
+                 
+                  <form method="post" action="{{ route('store.message') }}" class="main_form">
+                     @csrf
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
+                           <input name="name" class="contactus" placeholder="Name" type="text" > 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                           <input name="email" class="contactus" placeholder="Email" type="email" > 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                           <input name="phone" class="contactus" placeholder="Phone Number +" type="text" >                          
                         </div>
+                        
+                        <div class="col-md-12 ">
+     
+                         <input name="subject" class="contactus" placeholder="Subject/Product Required" type="text" > 
+                      </div>
+                        
                         <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message </textarea>
+                           <textarea name="message"  class="textarea" placeholder="Message" ></textarea>
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn">Send</button>

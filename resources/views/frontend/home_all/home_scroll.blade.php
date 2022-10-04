@@ -19,9 +19,9 @@
                <div class="row">
                   <div class="col-md-6">
                      <div class="text-bg">
-                        <span>{{$item->  portfolio_tittle}}</span>
+                        <span>{{$item->portfolio_tittle}}</span>
                         <h1></h1>
-                        <p> {{$item->  portfolio_description}} </p>
+                        <p> {!!$item->portfolio_description!!} </p>
                         <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
                      </div>
                   </div>                
