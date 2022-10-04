@@ -5,6 +5,7 @@ use \App\Http\Controllers\Demo\DemoController;
 use \App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
+use App\Http\Controllers\Home\PortfolioController;
 
 
 Route::get('/', function () {
@@ -27,7 +28,10 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('/dashboard', 'Dashboard')->name('dashboard');
 
     Route::get('/change/password', 'ChangePassword')->name('change.password');
-    Route::post('/update/password', 'UpdatePassword')->name('update.password');
+    Route::post('/update/password', 'UpdatePassword')->name('about.multi.page');
+
+
+    
 });
 
 // Home slide all route
@@ -47,10 +51,27 @@ Route::controller(AboutController::class)->group(function(){
     Route::post('/update/about', 'UpdateAbout')->name('update.about');
 
     Route::get('/about', 'HomeAbout')->name('home.about');
+
+ 
     
+});   
+
+ // Porfolio All Route 
+ Route::controller(PortfolioController::class)->group(function () {
+    Route::get('/all/portfolio', 'AllPortfolio')->name('all.portfolio');
+    Route::get('/add/portfolio', 'AddPortfolio')->name('add.portfolio');
+    Route::post('/store/portfolio', 'StorePortfolio')->name('store.protfolio');
+
+
+    Route::get('/edit/multi/image/{id}', 'EditMultiImage')->name('edit.multi.image');
+    Route::post('/update/multi/image', 'UpdateMultiImage')->name('update.multi.image');
+
+    Route::get('/delete/multi/image/{id}', 'DeleteMultiImage')->name('delete.multi.image');
     
 
-});    
+
+});
+
 
 Route::get('/dashboard', function () {
     return view('admin.index');

@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\About;
+use App\Models\MultiImage;
 use Image;
+
 
 class AboutController extends Controller
 {
@@ -75,4 +77,6 @@ class AboutController extends Controller
     return view('frontend.about_page',compact('aboutpage'));
 
  }// End Method 
+
+
 }

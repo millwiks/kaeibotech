@@ -38,9 +38,21 @@
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
                     <li><a href="{{ route('about.page')}}">About Page</a></li>
-                
+                                    
                 </ul>
             </li>
+
+            <li>
+             <a href="javascript: void(0);" class="has-arrow waves-effect">
+                   <i class="ri-mail-send-line"></i>
+                 <span>Home Scroll Setup</span>
+                  </a>
+              <ul class="sub-menu" aria-expanded="false">
+               <li><a href="{{ route('all.portfolio') }}">All Scroll</a></li>
+              <li><a href="{{ route('add.portfolio') }} ">Add Scroll</a></li>
+
+               </ul>
+              </li>
 
 
             <li class="menu-title">Pages</li>
