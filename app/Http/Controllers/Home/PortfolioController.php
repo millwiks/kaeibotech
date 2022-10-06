@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Portfolio;
-use Image;
+use Intervention\Image\Facades\Image;
 
 
 class PortfolioController extends Controller
