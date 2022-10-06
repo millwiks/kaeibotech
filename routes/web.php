@@ -9,6 +9,8 @@ use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Pos\SupplierController;
 use App\Http\Controllers\Pos\CustomerController;
+use App\Http\Controllers\Pos\UnitController;
+use App\Http\Controllers\Pos\CategoryController;
 
 
 Route::get('/', function () {
@@ -105,6 +107,29 @@ Route::controller(CustomerController::class)->group(function () {
     Route::get('/customer/delete/{id}', 'CustomerDelete')->name('customer.delete');
 
 });
+
+// Unit All Route 
+Route::controller(UnitController::class)->group(function () {
+    Route::get('/unit/all', 'UnitAll')->name('unit.all'); 
+    Route::get('/unit/add', 'UnitAdd')->name('unit.add');
+    Route::post('/unit/store', 'UnitStore')->name('unit.store');
+    Route::get('/unit/edit/{id}', 'UnitEdit')->name('unit.edit');
+    Route::post('/unit/update', 'UnitUpdate')->name('unit.update');
+    Route::get('/unit/delete/{id}', 'UnitDelete')->name('unit.delete');
+
+});
+
+// Category All Route 
+Route::controller(CategoryController::class)->group(function () {
+    Route::get('/category/all', 'CategoryAll')->name('category.all'); 
+    Route::get('/category/add', 'CategoryAdd')->name('category.add');
+    Route::post('/category/store', 'CategoryStore')->name('category.store');
+    Route::get('/category/edit/{id}', 'CategoryEdit')->name('category.edit');
+    Route::post('/category/update', 'CategoryUpdate')->name('category.update');
+    Route::get('/category/delete/{id}', 'CategoryDelete')->name('category.delete');
+
+});
+
 
 Route::get('/dashboard', function () {
     return view('admin.index');
