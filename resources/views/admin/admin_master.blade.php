@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="utf-8" />
-        <title>DASHBOARD | KAEIBO ELECTRICAL MANAGEMENT SYSTEM</title>
+        <title>DASHBOARD | KAEIBO ELECTRICALS MANAGEMENT SYSTEM</title>
         <meta name="viewport" content="widthT=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesdesign" name="author" />
@@ -123,6 +123,11 @@
  @endif 
 </script>
 
+
+ <!-- Required datatable js -->
+ <script src="{{ asset('backend/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+ <script src="{{ asset('backend/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+
         <!--tinymce js-->
         <script src="{{ asset('backend/assets/libs/tinymce/tinymce.min.js') }} "></script>
 
@@ -134,6 +139,8 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
         <script src="{{ asset('backend/assets/js/code.js') }}"></script>
+
+        <script src="{{ asset('backend/assets/js/validate.min.js') }}"></script>
 
     </body>
 

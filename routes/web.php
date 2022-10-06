@@ -7,6 +7,7 @@ use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\ContactController;
+use App\Http\Controllers\Pos\SupplierController;
 
 
 Route::get('/', function () {
@@ -78,10 +79,20 @@ Route::controller(AboutController::class)->group(function(){
     Route::get('/contact/message', 'ContactMessage')->name('contact.message');   
     Route::get('/delete/message/{id}', 'DeleteMessage')->name('delete.message');    
 
-
-
 });
 
+ // Admin All Route 
+ Route::controller(SupplierController::class)->group(function () {
+    Route::get('/supplier/all', 'SupplierAll')->name('supplier.all');
+    Route::get('/supplier/add', 'SupplierAdd')->name('supplier.add'); 
+    Route::post('/supplier/store', 'SupplierStore')->name('supplier.store');
+
+    Route::get('/supplier/edit/{id}', 'SupplierEdit')->name('supplier.edit');
+    Route::post('/supplier/update', 'SupplierUpdate')->name('supplier.update');
+    Route::get('/supplier/delete/{id}', 'SupplierDelete')->name('supplier.delete');
+  
+
+});
 
 
 Route::get('/dashboard', function () {
